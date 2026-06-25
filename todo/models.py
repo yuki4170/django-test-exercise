@@ -4,7 +4,7 @@ from django.utils import timezone
 class Task(models.Model):
     title = models.CharField(max_length=100)
     completed = models.BooleanField(default=False)
-    poster_at = models.DateTimeField(default=timezone.now)
+    posted_at = models.DateTimeField(default=timezone.now)
     due_at = models.DateTimeField(null=True, blank=True)
 
     def is_overdue(self, dt):
